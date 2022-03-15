@@ -1,0 +1,19 @@
+#!/bin/bash
+
+export CONTROLLER_IP="10.0.0.11"
+export COMPUTE_IP="10.0.0.13"
+export PROVIDER_INTERFACE_NAME="ens1"
+export ALLOWED_HOSTS_VALUE="'*'"
+
+export KEYSTONE_DBPASS=
+export ADMIN_PASS=
+export GLANCE_DBPASS=
+export GLANCE_PASS=
+export PLACEMENT_DBPASS=
+export PLACEMENT_PASS=
+export NOVA_DBPASS=
+export NOVA_PASS=
+export NEUTRON_DBPASS=
+export NEUTRON_PASS=
+export RABBIT_PASS=
+export METADATA_SECRET=
