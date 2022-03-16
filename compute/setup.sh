@@ -7,6 +7,9 @@ bash ../shared/prepare.sh
 echo "${COMPUTE_IP}       controller" >> /etc/hosts
 
 echo "step 2/3"
-bash ./nova/nova.sh
+cd nova
+bash ./nova.sh
+cd ..
 echo "step 3/3"
-bash ./neutron/neutron.sh
+cd neutron
+bash ./neutron.sh

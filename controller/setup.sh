@@ -24,10 +24,17 @@ export OS_IMAGE_API_VERSION=2" > ../shared/admin-openrc
 . ../shared/admin-openrc
 
 echo "step 3/6"
-bash ./glance/glance.sh
+cd glance
+bash ./glance.sh
+cd ..
 echo "step 4/6"
-bash ./nova/nova.sh
+cd nova
+bash ./nova.sh
+cd ..
 echo "step 5/6"
-bash ./neutron/neutron.sh
+cd neutron
+bash ./neutron.sh
+cd ..
 echo "step 6/6"
-bash ./horizon/horizon.sh
+cd horizon
+bash ./horizon.sh
