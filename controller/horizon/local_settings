@@ -133,8 +133,11 @@ OPENSTACK_API_VERSIONS = {
     "volume": 3,
 }
 
+WEBROOT = "/dashboard/"
 OPENSTACK_KEYSTONE_DEFAULT_DOMAIN = "Default"
-OPENSTACK_KEYSTONE_DEFAULT_ROLE = "user"
+OPENSTACK_KEYSTONE_DEFAULT_ROLE = "admin"
+LOGIN_URL = '/dashboard/auth/login/'
+LOGOUT_URL = '/dashboard/auth/logout/'
 
 # The timezone of the server. This should correspond with the timezone
 # of your entire OpenStack installation, and hopefully be in UTC.

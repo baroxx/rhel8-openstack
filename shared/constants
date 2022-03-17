@@ -17,3 +17,4 @@ export NEUTRON_DBPASS=
 export NEUTRON_PASS=
 export RABBIT_PASS=
 export METADATA_SECRET=
+export HORIZON_PASS=
