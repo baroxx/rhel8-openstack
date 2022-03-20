@@ -2,8 +2,6 @@
 
 echo "setup glance..."
 
-. ../shared/admin-openrc
-
 mysql -u root --password="" -e "CREATE DATABASE glance;
 GRANT ALL PRIVILEGES ON glance.* TO 'glance'@'localhost' IDENTIFIED BY '${GLANCE_DBPASS}';
 GRANT ALL PRIVILEGES ON glance.* TO 'glance'@'%' IDENTIFIED BY '${GLANCE_DBPASS}';"
@@ -19,7 +17,7 @@ firewall-cmd --reload
 
 dnf -y install openstack-glance
 
-cp ./glance-api.conf /etc/glance/glance-api.conf
+cp glance-api.conf /etc/glance/glance-api.conf
 sed -i "s/GLANCE_DBPASS/${GLANCE_DBPASS}/g" /etc/glance/glance-api.conf
 sed -i "s/GLANCE_PASS/${GLANCE_PASS}/g" /etc/glance/glance-api.conf
 firewall-cmd --add-port=11211/tcp --permanent

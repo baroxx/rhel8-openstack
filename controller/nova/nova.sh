@@ -30,7 +30,6 @@ openstack endpoint create --region RegionOne placement internal http://controlle
 openstack endpoint create --region RegionOne placement admin http://controller:8778/v3
 
 firewall-cmd --add-port=8774/tcp --permanent
-firewall-cmd --reload
 firewall-cmd --add-port=8778/tcp --permanent
 firewall-cmd --reload
 
