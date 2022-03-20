@@ -3,6 +3,7 @@
 # hosts
 echo "${CONTROLLER_IP}       controller" > /etc/hosts
 echo "${HOSTNAME}" > /etc/hostname
+hostname ${HOSTNAME}
 
 # setupntp
 echo "server controller iburst" > /etc/chrony.conf

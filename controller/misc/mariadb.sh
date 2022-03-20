@@ -2,7 +2,6 @@
 
 dnf -y install mariadb mariadb-server python2-PyMySQL
 
-mkdir /etc/my.cnf.d
 echo "[mysqld]
 bind-address = ${CONTROLLER_IP}
 

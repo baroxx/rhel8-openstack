@@ -3,7 +3,7 @@
 echo "setup neutron..."
 
 mysql -u root --password="" -e "CREATE DATABASE neutron;
-GRANT ALL PRIVILEGES ON neutron.* TO 'neutron'@'localhost' IDENTIFIED BY '${NEUTRON_DBPASS}';
+GRANT ALL PRIVILEGES ON neutron.* TO 'neutron'@'${HOSTNAME}' IDENTIFIED BY '${NEUTRON_DBPASS}';
 GRANT ALL PRIVILEGES ON neutron.* TO 'neutron'@'%' IDENTIFIED BY '${NEUTRON_DBPASS}';"
 
 openstack user create --domain default --password=${NEUTRON_PASS} neutron

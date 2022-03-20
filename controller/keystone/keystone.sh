@@ -3,7 +3,7 @@
 echo "setup keystone..."
 
 mysql -u root --password="" -e "CREATE DATABASE keystone;
-GRANT ALL PRIVILEGES ON keystone.* TO 'keystone'@'localhost' IDENTIFIED BY '${KEYSTONE_DBPASS}';
+GRANT ALL PRIVILEGES ON keystone.* TO 'keystone'@'${HOSTNAME}' IDENTIFIED BY '${KEYSTONE_DBPASS}';
 GRANT ALL PRIVILEGES ON keystone.* TO 'keystone'@'%' IDENTIFIED BY '${KEYSTONE_DBPASS}';"
 
 dnf -y install openstack-keystone httpd mod_wsgi

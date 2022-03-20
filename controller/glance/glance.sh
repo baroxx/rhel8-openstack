@@ -3,7 +3,7 @@
 echo "setup glance..."
 
 mysql -u root --password="" -e "CREATE DATABASE glance;
-GRANT ALL PRIVILEGES ON glance.* TO 'glance'@'localhost' IDENTIFIED BY '${GLANCE_DBPASS}';
+GRANT ALL PRIVILEGES ON glance.* TO 'glance'@'${HOSTNAME}' IDENTIFIED BY '${GLANCE_DBPASS}';
 GRANT ALL PRIVILEGES ON glance.* TO 'glance'@'%' IDENTIFIED BY '${GLANCE_DBPASS}';"
 
 openstack user create --domain default --password ${GLANCE_PASS} glance

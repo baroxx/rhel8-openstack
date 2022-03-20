@@ -14,6 +14,8 @@ cd keystone
 bash ./keystone.sh
 cd ..
 
+. ../shared/admin-openrc
+
 echo "step 3/6"
 cd glance
 bash ./glance.sh
