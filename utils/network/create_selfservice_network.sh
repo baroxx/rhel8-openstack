@@ -1,6 +1,6 @@
 #!/bin/bash
 
-. constants
+. ./constants
 
 # create provider network
 openstack network create  --share --external --provider-physical-network provider --provider-network-type flat provider
